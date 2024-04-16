@@ -1,0 +1,80 @@
+==========================
+Tests for 4-print_square.py
+==========================
+
+This is a test for the print_square function in the 4-print_square.py file.
+
+Usage
+=====
+
+The squares are printed using the ``#`` character. The size of the square is given by the first argument of the function.
+
+>>> print_square = __import__('4-print_square').print_square(4)
+####
+####
+####
+####
+
+>>> print_square = __import__('4-print_square').print_square(1)
+#
+
+>>> print_square = __import__('4-print_square').print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+
+>>> print_square = __import__('4-print_square').print_square(0)
+
+Invalid Sizes
+=============
+
+The size of the square must be an integer, otherwise a ``TypeError`` exception is raised with the message ``size must be an integer``.
+
+>>> try:
+...     print_square = __import__('4-print_square').print_square("10")
+... except TypeError as e:
+...     print(e)
+size must be an integer
+
+>>> try:
+...     print_square = __import__('4-print_square').print_square(-1)
+... except ValueError as e:
+...     print(e)
+size must be >= 0
+
+>>> try:
+...     print_square = __import__('4-print_square').print_square(1.5)
+... except TypeError as e:
+...     print(e)
+size must be an integer
+
+>>> try:
+...     print_square = __import__('4-print_square').print_square(True)
+... except TypeError as e:
+...     print(e)
+size must be an integer
+
+>>> try:
+...     print_square = __import__('4-print_square').print_square(None)
+... except TypeError as e:
+...     print(e)
+size must be an integer
+
+>>> try:
+...     print_square = __import__('4-print_square').print_square([1, 2, 3])
+... except TypeError as e:
+...     print(e)
+size must be an integer
+
+>>> try:
+...     print_square = __import__('4-print_square').print_square(False)
+... except TypeError as e:
+...     print(e)
+size must be an integer

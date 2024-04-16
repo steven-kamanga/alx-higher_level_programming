@@ -1,0 +1,85 @@
+================================
+How to Use 5-text_indentation.py
+================================
+
+This module is used to indent text. It is used by the other modules in this package.
+
+Usage
+=====
+
+Text is printed with two new lines after each to the characters ``.``, ``?``, and ``:``. The text is indented by the number of spaces specified by the ``indent`` parameter. The default is 4 spaces.
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation("Hello?")
+Hello?
+<BLANKLINE>
+
+Spaces will be ignored at the beginning of the text.
+>>> text_indentation = __import__('5-text_indentation').text_indentation("   Hello?")
+Hello?
+<BLANKLINE>
+
+Spaces will be ignored at the end of the text.
+>>> text_indentation = __import__('5-text_indentation').text_indentation("Hello?   ")
+Hello?
+<BLANKLINE>
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation("Hello\nWorld!")
+Hello
+World!
+
+If the text is not a string, a TypeError exception is raised.
+>>> try:
+...     text_indentation = __import__('5-text_indentation').text_indentation(1)
+... except TypeError as e:
+...     print(e)
+text must be a string
+
+>>> try:
+...     text_indentation = __import__('5-text_indentation').text_indentation([1, 2, 3])
+... except TypeError as e:
+...     print(e)
+text must be a string
+
+>>> try:
+...     text_indentation = __import__('5-text_indentation').text_indentation((1, 2, 3))
+... except TypeError as e:
+...     print(e)
+text must be a string
+
+>>> try:
+...     text_indentation = __import__('5-text_indentation').text_indentation(None)
+... except TypeError as e:
+...     print(e)
+text must be a string
+
+>>> try:
+...     text_indentation = __import__('5-text_indentation').text_indentation(True)
+... except TypeError as e:
+...     print(e)
+text must be a string
+
+>>> try:
+...     text_indentation = __import__('5-text_indentation').text_indentation(False)
+... except TypeError as e:
+...     print(e)
+text must be a string
+
+>>> try:
+...     text_indentation = __import__('5-text_indentation').text_indentation(1.5)
+... except TypeError as e:
+...     print(e)
+text must be a string
+
+>>> try:
+...     text_indentation = __import__('5-text_indentation').text_indentation({"a": 1, "b": 2})
+... except TypeError as e:
+...     print(e)
+text must be a string
+
+>>> try:
+...     text_indentation = __import__('5-text_indentation').text_indentation({"a", "b"})
+... except TypeError as e:
+...     print(e)
+text must be a string
+
+

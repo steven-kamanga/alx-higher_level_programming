@@ -1,0 +1,40 @@
+==========================
+Tests for 3-say_my_name.py
+==========================
+
+This defines a function ``say_my_name`` that takes a two strings as arguments and prints ``My name is <first name> <last name>``.
+
+Usage
+=====
+``say_my_name(...)`` takes two strings as arguments. The first string is the first name and the second string is the last name.
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name("John", "Smith")
+My name is John Smith
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name("Walter", "White")
+My name is Walter White
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name("Bob")
+My name is Bob 
+
+Incorrect arguments
+===================
+``say_my_name`` raises a ``TypeError`` if the arguments are not strings.
+
+>>> try:
+...     say_my_name = __import__('3-say_my_name').say_my_name(12, "White")
+... except TypeError as e:
+...     print(e)
+first_name must be a string
+
+>>> try:
+...     say_my_name = __import__('3-say_my_name').say_my_name("White", ["White"])
+... except TypeError as e:
+...     print(e)
+last_name must be a string
+
+>>> try:
+...     say_my_name = __import__('3-say_my_name').say_my_name([21, "King"], ["White"])
+... except TypeError as e:
+...     print(e)
+first_name must be a string
