@@ -8,6 +8,10 @@ import urllib.request
 
 
 if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: ./1-hbtn_header.py <URL>")
+        sys.exit(1)
+
     url = sys.argv[1]
 
     request = urllib.request.Request(url)
